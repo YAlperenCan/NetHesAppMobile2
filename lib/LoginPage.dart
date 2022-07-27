@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     Container(
                       height: 50,
                       decoration: BoxDecoration(
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 45,
                     ),
                     Container(
                           decoration: BoxDecoration(
