@@ -26,13 +26,13 @@ class _State extends State<Dashboard> {
                   Container(
                     height: 3,
                     child: const Divider(
-                      color:  Colors.white38,
+                      color:  Colors.white54,
                     ),
                   ),
                     const SizedBox(
                       height: 25,
                     ),
-                  ListTileMethod(title: "Dashboard",press:(){},icon:Icons.menu),
+                  ListTileMethod(title: "Dashboard",press:(){},icon:Icons.dashboard),
                   ListTileMethod(title: "Bakiye",press:(){},icon:Icons.account_balance),
                   ListTileMethod(title: "Son hareketler",press:(){},icon:Icons.access_alarms_sharp),
                   ListTileMethod(title: "Hesap Hareketleri",press:(){},icon:Icons.wallet),
@@ -57,6 +57,7 @@ class ListTileMethod extends StatelessWidget {
      required this.title,
      @required this.press,
      @required this.icon,
+
   })  ;
 
 
@@ -65,8 +66,8 @@ class ListTileMethod extends StatelessWidget {
     return ListTile(
       horizontalTitleGap: 0.0,
       onTap: press,
-      leading: Icon(icon,color: Colors.white,size: 25),
-      title :Text(title,style: TextStyle(color: Colors.white,fontSize: 30),)
+      leading: Icon(icon,color: Colors.white54,size: 25),
+      title :Text(title,style: TextStyle(color: Colors.white54,fontSize: 20),)
 
     );
   }
