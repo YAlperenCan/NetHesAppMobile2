@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
               fit: BoxFit.cover,
               opacity: 0.95)),
       child: Scaffold(
+
         backgroundColor: Colors.transparent,
         body: SafeArea(
             child: Form(
