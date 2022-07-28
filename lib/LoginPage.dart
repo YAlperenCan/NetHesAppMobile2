@@ -24,22 +24,22 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+               Container(
                 height: 50,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(
                             'https://cdn.discordapp.com/attachments/731126213292064871/1001464747935408158/logo-nethesapp-white.png'))),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
                 decoration: BoxDecoration(
                     color: Colors.purple[900],
                     borderRadius: BorderRadius.circular(8.0)),
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(12.0),
                   child: Text(
                     'E-mail ve şifre bilgilerinizle giriş yapabilirsiniz',
                     style: TextStyle(color: Colors.white),

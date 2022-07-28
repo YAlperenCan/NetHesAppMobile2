@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
+
+
 
 void main() {
   runApp(const loginpage());
@@ -16,7 +19,8 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+      home: Dashboard(),
     );
   }
 }
