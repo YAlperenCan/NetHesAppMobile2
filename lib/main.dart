@@ -33,7 +33,6 @@ class _loginpageState extends State<loginpage> {
 
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
-
       debugShowCheckedModeBanner: false,
       home: Sonhareketler2(),
     );
