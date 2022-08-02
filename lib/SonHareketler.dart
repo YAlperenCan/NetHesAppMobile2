@@ -49,25 +49,34 @@ class _State extends State<SonHareketler> {
       )
     ];
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child:
-        Column(
-          children: [
-            Container(
+      body:
+      Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child:
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                 Container(
+                  color: Colors.black,
+                  height: 250,
+                  width: 300,
+                  child: charts.BarChart(series) ,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                 Container(
+                    color: Colors.black,
+                    height: 250,
+                    width: 300,
+                    child: charts.BarChart(series2) ,
+                  ),
 
-              color: Colors.black,
-              height: 200,
-              width: 200,
-              child: charts.BarChart(series) ,
+              ],
+
             ),
-            Container(
-              color: Colors.black,
-              height: 200,
-              width: 200,
-              child: charts.BarChart(series2) ,
-            ),
-          ],
+          ),
         ),
       ),
     );

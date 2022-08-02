@@ -5,6 +5,8 @@ import 'package:loginpage/LoginPage.dart';
 import 'package:loginpage/SonHareketler.dart';
 import 'package:charts_flutter/flutter.dart';
 
+import 'SonHareketler2.dart';
+
 
 
 
@@ -33,7 +35,7 @@ class _loginpageState extends State<loginpage> {
       theme: ThemeData(primarySwatch: Colors.blue),
 
       debugShowCheckedModeBanner: false,
-      home: SonHareketler(),
+      home: Sonhareketler2(),
     );
   }
 }
