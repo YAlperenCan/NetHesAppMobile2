@@ -185,7 +185,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
           child: Text(
             sayisi.toString(),
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 13,
                 decoration: TextDecoration.none,
                 color: Colors.black,
             ),
@@ -220,7 +220,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
           child: Text(
             sayisi.toString(),
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 13,
                 decoration: TextDecoration.none,
                 color: Colors.black),
           ),
