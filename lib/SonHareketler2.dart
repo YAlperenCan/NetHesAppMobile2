@@ -31,16 +31,17 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      'https://cdn.discordapp.com/attachments/731126213292064871/1004714508503228436/fe0e5376e5d520bf2b4a67d9ead3fb0c.jpg'),
+                      'https://cdn.discordapp.com/attachments/731126213292064871/1001441274991214592/unknown.png'),
                   fit: BoxFit.cover,
                   opacity: 0.95)),
           child: Column(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: BoxDecoration(boxShadow: [
+              BoxShadow(color:Colors.black,spreadRadius: 1)],
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://cdn.discordapp.com/attachments/731126213292064871/1004714508503228436/fe0e5376e5d520bf2b4a67d9ead3fb0c.jpg'),
+                          'https://cdn.discordapp.com/attachments/731126213292064871/1001441274991214592/unknown.png'),
                       fit: BoxFit.cover,
                       opacity: 0.95)),
                 height: 75,
@@ -57,7 +58,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top :19,left: 7,right: 10),
-                      child: Text("Kullanıcı paneli",style: TextStyle(fontSize: 20),),
+                      child: Text("Kullanıcı paneli",style: TextStyle(fontSize: 20,color:Colors.white),),
                     ),
      // kullanıcı simgesi gelice.
                   ],
@@ -65,7 +66,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               ),
               Padding(
                 padding: const EdgeInsets.only(right:200,top: 15),
-                child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.only(),
@@ -102,7 +103,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               ),
               Padding(
                 padding: const EdgeInsets.only(right:200,top: 20),
-                child: Text("ÇIKIŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                child: Text("ÇIKIŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.only( bottom: 20),
@@ -151,10 +152,15 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
       ),
     );
   }
-  ListTile hareketlertext(IconData gelirgider,Color renk,String isim, double? miktar) {
-    return ListTile(
-      leading: Icon(gelirgider,color: renk,size: 25),
-      title: Text("$isim $miktar"),
+  Container hareketlertext(IconData gelirgider,Color renk,String isim, double? miktar) {
+    return Container(
+        decoration: BoxDecoration(color: Colors.white,
+        borderRadius: BorderRadius.circular(10)),
+      margin: EdgeInsets.only(top :5,left: 13,right: 13,bottom: 5),
+      child: ListTile(
+        leading: Icon(gelirgider,color: renk,size: 25),
+        title: Text("$isim $miktar",style: TextStyle(color: Colors.black),),
+      ),
     );
   }
 
