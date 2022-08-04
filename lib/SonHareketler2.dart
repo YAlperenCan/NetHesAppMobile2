@@ -182,12 +182,15 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             left: 7,
             right: 7,
           ),
-          child: Text(
-            sayisi.toString(),
-            style: TextStyle(
-                fontSize: 13,
-                decoration: TextDecoration.none,
-                color: Colors.black,
+          child: RotatedBox(
+            quarterTurns: 3,
+            child: Text(
+              sayisi.toString(),
+              style: TextStyle(
+                  fontSize: 15,
+                  decoration: TextDecoration.none,
+                  color: Colors.black,
+              ),
             ),
           ),
         ),
@@ -217,12 +220,15 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             left: 7,
             right: 7,
           ),
-          child: Text(
-            sayisi.toString(),
-            style: TextStyle(
-                fontSize: 13,
-                decoration: TextDecoration.none,
-                color: Colors.black),
+          child: RotatedBox(
+            quarterTurns: 3,
+            child: Text(
+              sayisi.toString(),
+              style: TextStyle(
+                  fontSize: 15,
+                  decoration: TextDecoration.none,
+                  color: Colors.black),
+            ),
           ),
         ),
         Text(
