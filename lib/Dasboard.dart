@@ -14,7 +14,7 @@ class _State extends State<Dashboard> {
       body: SafeArea(
         child: Container(
           child: Drawer(
-            width: 220,
+            width: 300,
             backgroundColor: Colors.black87,
             child: SingleChildScrollView(
               child: Column(

@@ -11,7 +11,7 @@ class Sonhareketler2 extends StatefulWidget {
 class _Sonhareketler2State extends State<Sonhareketler2> {
   @override
   Map<String, double> Money = {
-    "Girdi_1": 400,
+    "Girdi_1": 250,
     "Girdi_2": 120,
     "Girdi_3": 45,
     "Girdi_4": 150,
@@ -22,7 +22,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     "çıktı_2": 120,
     "çıktı_3": 80,
     "çıktı_4": 130,
-    "çıktı_5":300
+    "çıktı_5":200
   };
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      'https://cdn.discordapp.com/attachments/731126213292064871/1004368153867997234/purple-screen-wallpaper-preview.jpg'),
+                      'https://cdn.discordapp.com/attachments/731126213292064871/1004714508503228436/fe0e5376e5d520bf2b4a67d9ead3fb0c.jpg'),
                   fit: BoxFit.cover,
                   opacity: 0.95)),
           child: Column(
@@ -40,7 +40,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://cdn.discordapp.com/attachments/731126213292064871/1004368153867997234/purple-screen-wallpaper-preview.jpg'),
+                          'https://cdn.discordapp.com/attachments/731126213292064871/1004714508503228436/fe0e5376e5d520bf2b4a67d9ead3fb0c.jpg'),
                       fit: BoxFit.cover,
                       opacity: 0.95)),
                 height: 75,
@@ -70,12 +70,10 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               Padding(
                 padding: const EdgeInsets.only(),
                 child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'https://cdn.discordapp.com/attachments/731126213292064871/1004367529998815312/p0rMI9xJ.jpg'),
-                          fit: BoxFit.cover,
-                          opacity: 0.95),borderRadius: BorderRadius.circular(10)),
+                  decoration: BoxDecoration(color: Colors.white,
+    borderRadius: BorderRadius.circular(10),boxShadow: [
+                        BoxShadow(color:Colors.black,spreadRadius: 1)
+                      ]),
                   height: 230,
                   width: 400,
                   child: Column(
@@ -109,12 +107,10 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               Padding(
                 padding: const EdgeInsets.only( bottom: 20),
                 child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'https://cdn.discordapp.com/attachments/731126213292064871/1004367529998815312/p0rMI9xJ.jpg'),
-                          fit: BoxFit.cover,
-                          opacity: 0.95),borderRadius: BorderRadius.circular(10)),
+    decoration: BoxDecoration(color: Colors.white,
+    borderRadius: BorderRadius.circular(10),boxShadow: [
+    BoxShadow(color:Colors.black,spreadRadius: 1)
+    ]),
                   height: 230,
                   width: 400,
                   child: Column(
@@ -164,17 +160,16 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
 
   Column chartmethodgir(@required double? yukseklik,@required double? sayisi) {
     double hareket(double tutar){
-      return ((tutar) * 200)/400;
+      return ((tutar) * 200)/300;
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Container( decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://cdn.discordapp.com/attachments/731126213292064871/1004367069330030702/2d2ac1eb13122106.jpg'),
-                fit: BoxFit.cover,
-                opacity: 0.95)),
+        Container(
+            decoration: BoxDecoration(
+            color: Colors.blue,
+            ),
+
           height: hareket(yukseklik!),
           width: 26,
           margin: EdgeInsets.only(
@@ -186,7 +181,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             style: TextStyle(
                 fontSize: 20,
                 decoration: TextDecoration.none,
-                color: Colors.blue,
+                color: Colors.black,
             ),
           ),
         ),
@@ -203,17 +198,13 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
 
   Column chartmethodcik(@required double? yukseklik,@required double? sayisi) {
     double hareket(double tutar){
-      return ((tutar) * 200)/400;
+      return ((tutar) * 200)/300;
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://cdn.discordapp.com/attachments/731126213292064871/1004367069330030702/2d2ac1eb13122106.jpg'),
-                fit: BoxFit.cover,
-                opacity: 0.95)),
+            color: Colors.blue),
           height: hareket(yukseklik!),
           width: 26,
           margin: EdgeInsets.only(
@@ -225,7 +216,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             style: TextStyle(
                 fontSize: 20,
                 decoration: TextDecoration.none,
-                color: Colors.blue),
+                color: Colors.black),
           ),
         ),
         Text(
