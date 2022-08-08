@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loginpage/BakiyeBilgileri.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
 import 'package:loginpage/SonHareketler.dart';
@@ -34,7 +35,7 @@ class _loginpageState extends State<loginpage> {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
-      home: Sonhareketler2(),
+      home: BakiyeBilgileri(),
     );
   }
 }
