@@ -8,45 +8,58 @@ class BakiyeBilgileri extends StatefulWidget {
 }
 
 class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
-  double height_ = 75;
-  double width_ = 200;
+
+  List<ekbilgiler> items = <ekbilgiler>[
+    ekbilgiler(head: "akbank",body: "hesap no: 123143234",body2: "bakiye :123123123"),
+    ekbilgiler(head: "A",body: "ek bilgi23"),
+    ekbilgiler(head: "akbank3",body: "ek bilgi4"),
+    ekbilgiler(head: "akbank4",body: "ek bilgi1"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Row(
+     body:ListView(
        children: [
-         Center(
-           child: Container(
-             color: Colors.blue,
-             width: 350,
-             height: 50,
-             child: ListTile(
-               title: Text("1300000tl"),
-               leading: Icon(Icons.account_balance_wallet_rounded),
-             ),
-           ),
-         ),
-         IconButton(onPressed: (){
-           actions: [
-             PopupMenuButton(
-                 itemBuilder: (context) => [
-                   PopupMenuItem(
-                     child: Text("Şirket adı: bla bla"),
-                     value: 1,
-                   ),
-                   PopupMenuItem(
-                     child: Text("Hesap no: bla bla"),
-                     value: 2,
-                   )
-                 ])
-           ];
-         }, icon: Icon(Icons.search))
+         ExpansionPanelList(
+           expansionCallback: (int index,bool isExpanded){
+             setState((){
+               items[index].isExpanded=!items[index].isExpanded;
+             });
+           },
+           children: items.map((ekbilgiler item) {
+             return ExpansionPanel(
+                 headerBuilder:( BuildContext context, bool isExpanded){
+               return Container(
+                 child: ListTile(
+                   leading:Icon(Icons.add) ,
+                   title:Text(item.head!),
+                 ),
+               );
+             },
+               isExpanded: item.isExpanded,
+              body: Column(
+                children: [
+                  Text(item.body!),
+                  Text(item.body2)
+                ],
+              )
+             );
+           }).toList(),
+         )
        ],
-     ),
-
-
+     )
 
 
     );
   }
+}
+class ekbilgiler{
+  bool isExpanded;
+  final String body2;
+  final String? head;
+  final String? body;
+
+  ekbilgiler({this.isExpanded:false,this.head,this.body,this.body2});
+
 }
