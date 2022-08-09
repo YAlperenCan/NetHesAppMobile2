@@ -6,6 +6,7 @@ import 'package:loginpage/LoginPage.dart';
 import 'package:loginpage/SonHareketler.dart';
 import 'package:charts_flutter/flutter.dart';
 
+import 'HesapHareketleri.dart';
 import 'SonHareketler2.dart';
 
 
@@ -35,7 +36,7 @@ class _loginpageState extends State<loginpage> {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
-      home: BakiyeBilgileri(),
+      home: HesapHareketleri(),
     );
   }
 }
