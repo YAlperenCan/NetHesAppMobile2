@@ -77,7 +77,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                 flex: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black,
                     boxShadow: [BoxShadow(color: Colors.white, spreadRadius: 1)],
                   ),
                   height: 75,
@@ -109,7 +109,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                 child: Row(
                   children: [
                     Container(
-                        padding: EdgeInsets.only(left: 40, right: 130),
+                        padding: EdgeInsets.only(left: 40, right: 150),
                         height: 20,
                         child: Text(
                           "Banka Adı",

@@ -100,7 +100,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                 flex: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black,
                     boxShadow: [BoxShadow(color: Colors.white, spreadRadius: 1)],
                   ),
                   height: 75,

@@ -33,8 +33,13 @@ class _loginpageState extends State<loginpage> {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
+
+      darkTheme: ThemeData(
+        brightness: Brightness.dark
+
+      ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
+
       home: HesapHareketleri(),
     );
   }
