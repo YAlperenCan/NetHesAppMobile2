@@ -3,8 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:loginpage/BakiyeBilgileri.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
-import 'package:loginpage/SonHareketler.dart';
-import 'package:charts_flutter/flutter.dart';
+
 
 import 'HesapHareketleri.dart';
 import 'SonHareketler2.dart';

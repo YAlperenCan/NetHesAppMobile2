@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 class HesapHareketleri extends StatefulWidget {
   const HesapHareketleri({Key? key}) : super(key: key);
 
@@ -8,7 +7,6 @@ class HesapHareketleri extends StatefulWidget {
 }
 
 class _HesapHareketleriState extends State<HesapHareketleri> {
-  NumberFormat myFormat = NumberFormat.decimalPattern('en_us');
   List<ekbilgiler> items = <ekbilgiler>[
     ekbilgiler(
         bankaAd: "TÜRKİYE FİNANS KATILIM BANK ",
@@ -176,7 +174,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                             Container(
                                               padding: EdgeInsets.only(left: 0),
                                               child: Text(
-                                                myFormat.format(item.bakiye).toString(),
+                                                (item.bakiye).toString(),
                                                 style: TextStyle(
                                                     color: Colors.green[700]
                                                         ),
