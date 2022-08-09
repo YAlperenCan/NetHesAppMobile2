@@ -12,66 +12,82 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
         bankaAd: "TÜRKİYE FİNANS KATILIM BANK ",
         bakiye: 243577374,
         bankaIcon: Icons.account_balance,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Limra Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 151020221150),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 151020221150,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.green[700]),
     ekbilgiler(
         bankaAd: "DENİZBANK",
         bakiye: 24357689,
         bankaIcon: Icons.access_alarms_sharp,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.red[700]),
     ekbilgiler(
         bankaAd: "ŞEKERBANK",
         bakiye: 256789567,
         bankaIcon: Icons.account_balance,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.green[700]),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
         bakiye: 345676789,
         bankaIcon: Icons.add_chart_rounded,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.red[700]),
     ekbilgiler(
         bankaAd: "TÜRK EKONOMİ BANKASI",
         bakiye: 632738123,
         bankaIcon: Icons.account_balance,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.green[700]),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
         bakiye: 24369868,
         bankaIcon: Icons.abc,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.red[700]),
     ekbilgiler(
         bankaAd: "DENİZBANK",
         bakiye: 14475869,
         bankaIcon: Icons.account_circle_sharp,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.red[700]),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
         bakiye: 456435345,
         bankaIcon: Icons.account_balance,
-        sirketAd: "Limak Hotel",
+        hotelAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555,
-        tarih: 15102022),
+        adres: "referans nolu havale yapılmıştır",
+        tarih: 15102022,
+        hesapYeri: "Kızılay Şube Hesabı"
+        ,collors: Colors.green[700]),
   ];
 
   @override
@@ -176,7 +192,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                               child: Text(
                                                 (item.bakiye).toString(),
                                                 style: TextStyle(
-                                                    color: Colors.green[700]
+                                                    color: item.collors
                                                         ),
                                               ),
                                             ),
@@ -201,46 +217,24 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                               children: [
                                 SizedBox(
                                   height: 30,
-                                  child: ListTile(
-                                    leading: Padding(
-                                      padding: const EdgeInsets.only(top:4),
-                                      child: Text(
-                                        "Şirket Adı : ",
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                    ),
-                                    title: Text(item.sirketAd!,
-                                        style: TextStyle(fontSize: 14)),
-                                  ),
+                                  child: Text(item.hotelAd!,
+                                      style: TextStyle(fontSize: 14)),
                                 ),
                                 SizedBox(
                                   height: 30,
-                                  child: ListTile(
-                                    leading: Padding(
-                                      padding: const EdgeInsets.only(top:4),
-                                      child: Text(
-                                        "Hesap No : ",
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                    ),
-                                    title: Text(
+                                  child:
+                                    Text(
                                       item.hesapNo.toString(),
                                       style: TextStyle(fontSize: 14),
                                     ),
                                   ),
+                                Text(
+                                  item.adres.toString(),
+                                  style: TextStyle(fontSize: 14),
                                 ),
-                                ListTile(
-                                  leading: Padding(
-                                    padding: const EdgeInsets.only(top:4),
-                                    child: Text(
-                                      "Devir Bakiye :",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                  ),
-                                  title: Text(
-                                    item.devirbakiye.toString(),
-                                    style: TextStyle(fontSize: 14),
-                                  ),
+                                Text(
+                                  item.hesapYeri.toString(),
+                                  style: TextStyle(fontSize: 14),
                                 ),
                               ],
                             ));
@@ -257,20 +251,23 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
 
 class ekbilgiler {
   bool isExpanded;
-  final int? devirbakiye;
+  final String? adres;
+  final String? hesapYeri;
   final int? tarih;
+  final Color? collors;
   final int? hesapNo;
-  final String? sirketAd;
+  final String? hotelAd;
   final IconData? bankaIcon;
   final String? bankaAd;
   final int? bakiye;
+
 
   ekbilgiler(
       {this.isExpanded: false,
         this.bankaAd,
         this.bakiye,
         this.bankaIcon,
-        this.sirketAd,
+        this.hotelAd,
         this.hesapNo,
-        this.devirbakiye,this.tarih});
+        this.adres,this.tarih,this.hesapYeri,this.collors});
 }
