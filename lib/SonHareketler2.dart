@@ -58,7 +58,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top :19,left: 7,right: 10),
-                      child: Text("Kullanıcı paneli",style: TextStyle(fontSize: 20,color:Colors.white),),
+                      child: Text("Son Hareketler ",style: TextStyle(fontSize: 20,color:Colors.white),),
                     ),
      // kullanıcı simgesi gelice.
                   ],
@@ -71,7 +71,11 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               Padding(
                 padding: const EdgeInsets.only(),
                 child: Container(
-                  decoration: BoxDecoration(color: Colors.white,
+                  decoration: BoxDecoration( image: DecorationImage(
+                      image: NetworkImage(
+                          'https://cdn.discordapp.com/attachments/731126213292064871/1006821181208395836/background-2481466__340.webp'),
+                      fit: BoxFit.cover,
+                      opacity: 0.10),color: Colors.white,
     borderRadius: BorderRadius.circular(10),boxShadow: [
                         BoxShadow(color:Colors.black,spreadRadius: 1)
                       ]),
@@ -140,9 +144,9 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               ),
               Column(
                 children: [
-                  hareketlertext(Icons.add,Colors.green,"akbank",Money["Girdi_1"]),
+                  hareketlertext(Icons.add_box,Colors.green,"akbank",Money["Girdi_1"]),
                   hareketlertext(Icons.indeterminate_check_box,Colors.redAccent,"akbank",Money2["çıktı_5"]),
-                  hareketlertext(Icons.add,Colors.green,"akbank",Money["Girdi_2"]),
+                  hareketlertext(Icons.add_box,Colors.green,"akbank",Money["Girdi_2"]),
                   hareketlertext(Icons.indeterminate_check_box,Colors.redAccent,"akbank",Money2["çıktı_4"]),
                 ],
               )

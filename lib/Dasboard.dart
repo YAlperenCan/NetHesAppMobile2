@@ -15,7 +15,7 @@ class _State extends State<Dashboard> {
         child: Container(
           child: Drawer(
             width: 300,
-            backgroundColor: Colors.black87,
+            backgroundColor: Colors.blue.withOpacity(0.9),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -83,7 +83,7 @@ class ListTileMethod extends StatelessWidget {
         leading: Icon(icon, color: Colors.white54, size: 25),
         title: Text(
           title,
-          style: TextStyle(color: Colors.white54, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 20),
         ));
   }
 }

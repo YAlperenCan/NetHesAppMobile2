@@ -14,7 +14,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
         bankaIcon: Icons.account_balance,
         hotelAd: "Limak Limra Hotel",
         hesapNo: 123123123,
-        adres: "referans nolu havale yapılmıştır",
+        adres: "Referans nolu havale yapılmıştır",
         tarih: 151020221150,
         hesapYeri: "Kızılay Şube Hesabı"
         ,collors: Colors.green[700]),
@@ -100,7 +100,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                 flex: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.blue,
                     boxShadow: [BoxShadow(color: Colors.white, spreadRadius: 1)],
                   ),
                   height: 75,
@@ -118,7 +118,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                       Padding(
                         padding: const EdgeInsets.only(top: 7, left: 7, right: 10),
                         child: Text(
-                          "Bakiye Bilgileri",
+                          "Hesap Hareketleri ",
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ),
@@ -213,30 +213,39 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                   ));
                             },
                             isExpanded: item.isExpanded,
-                            body: Column(
-                              children: [
-                                SizedBox(
-                                  height: 30,
-                                  child: Text(item.hotelAd!,
-                                      style: TextStyle(fontSize: 14)),
-                                ),
-                                SizedBox(
-                                  height: 30,
-                                  child:
-                                    Text(
-                                      item.hesapNo.toString(),
+                            body: Container(padding: EdgeInsets.only(right: 140),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                    child: Text(item.hotelAd!,
+                                        style: TextStyle(fontSize: 14)),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                    child:
+                                      Text(
+                                        item.hesapNo.toString(),
+                                        style: TextStyle(fontSize: 14),
+                                      ),
+                                    ),
+                                  SizedBox(
+                                    height: 30,
+                                    child: Text(
+                                      item.adres.toString(),
                                       style: TextStyle(fontSize: 14),
                                     ),
                                   ),
-                                Text(
-                                  item.adres.toString(),
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                                Text(
-                                  item.hesapYeri.toString(),
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 30,
+                                    child: Text(
+                                      item.hesapYeri.toString(),
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ));
                       }).toList(),
                     )

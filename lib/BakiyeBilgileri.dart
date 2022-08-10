@@ -77,7 +77,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                 flex: 2,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.blue,
                     boxShadow: [BoxShadow(color: Colors.white, spreadRadius: 1)],
                   ),
                   height: 75,
@@ -89,7 +89,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                         child: Padding(
                           padding:
                           const EdgeInsets.only(top: 7, left: 7, right: 10),
-                          child: Icon(Icons.dashboard, color: Colors.blue[100]),
+                          child: Icon(Icons.dashboard, color: Colors.white),
                         ),
                       ),
                       Padding(
@@ -218,7 +218,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                   height: 30,
                                   child: ListTile(
                                     leading: Padding(
-                                      padding: const EdgeInsets.only(top:4),
+                                      padding: const EdgeInsets.only(top:4,left: 23),
                                       child: Text(
                                         "Şirket Adı : ",
                                         style: TextStyle(fontSize: 14),
@@ -232,7 +232,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                   height: 30,
                                   child: ListTile(
                                     leading: Padding(
-                                      padding: const EdgeInsets.only(top:4),
+                                      padding: const EdgeInsets.only(top:4,left: 23),
                                       child: Text(
                                         "Hesap No : ",
                                         style: TextStyle(fontSize: 14),
@@ -246,7 +246,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                 ),
                                 ListTile(
                                   leading: Padding(
-                                    padding: const EdgeInsets.only(top:4),
+                                    padding: const EdgeInsets.only(top:4,left: 23),
                                     child: Text(
                                       "Devir Bakiye :",
                                       style: TextStyle(fontSize: 14),
