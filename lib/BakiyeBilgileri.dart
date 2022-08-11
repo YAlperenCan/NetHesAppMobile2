@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/Dasboard.dart';
+
+import 'CustomDrawer.dart';
 
 class BakiyeBilgileri extends StatefulWidget {
   const BakiyeBilgileri({Key? key}) : super(key: key);
@@ -11,99 +14,72 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
   List<ekbilgiler> items = <ekbilgiler>[
     ekbilgiler(
         bankaAd: "TÜRKİYE FİNANS KATILIM BANK ",
-        bakiye: 243575687374,
+        bakiye: "243575687374",
         bankaIcon: Icons.account_balance,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "DENİZBANK",
-        bakiye: 24357689,
+        bakiye: "24357689",
         bankaIcon: Icons.access_alarms_sharp,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "ŞEKERBANK",
-        bakiye: 24356789567,
+        bakiye: "24356789567",
         bankaIcon: Icons.account_balance,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
-        bakiye: 345676789,
+        bakiye: "345676789",
         bankaIcon: Icons.add_chart_rounded,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "TÜRK EKONOMİ BANKASI",
-        bakiye: 632738123,
+        bakiye: "632738123",
         bankaIcon: Icons.account_balance,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
-        bakiye: 2435769868,
+        bakiye: "2435769868",
         bankaIcon: Icons.abc,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "DENİZBANK",
-        bakiye: 1435475869,
+        bakiye: "1435475869",
         bankaIcon: Icons.account_circle_sharp,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
     ekbilgiler(
         bankaAd: "VAKIFBANK",
-        bakiye: 456435345,
+        bakiye: "456435345",
         bankaIcon: Icons.account_balance,
         sirketAd: "Limak Hotel",
         hesapNo: 123123123,
-        devirbakiye: 55555555),
+        devirbakiye: "55555555"),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text("Bakiye Bilgileri"),
+        ),
+          drawer: CustomDrawer(),
           body: Column(
             children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    boxShadow: [BoxShadow(color: Colors.white, spreadRadius: 1)],
-                  ),
-                  height: 75,
-                  width: 450,
-                  child: Row(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Padding(
-                          padding:
-                          const EdgeInsets.only(top: 7, left: 7, right: 10),
-                          child: Icon(Icons.dashboard, color: Colors.white),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 7, left: 7, right: 10),
-                        child: Text(
-                          "Bakiye Bilgileri",
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ),
-                      // kullanıcı simgesi gelice.
-                    ],
-                  ),
-                ),
-              ),
               Expanded(
                 flex: 2,
                 child: Row(
@@ -196,7 +172,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                                     const EdgeInsets.all(5.0),
                                                     child: Container(
                                                       child: Text(
-                                                        item.bakiye!.toString(),
+                                                        item.bakiyeformat().toString(),
                                                         style: TextStyle(
                                                             color: Colors.blue
                                                                 .withOpacity(0.8)),
@@ -253,7 +229,7 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                     ),
                                   ),
                                   title: Text(
-                                    item.devirbakiye.toString(),
+                                    item.devirbakiyeformat().toString(),
                                     style: TextStyle(fontSize: 14),
                                   ),
                                 ),
@@ -272,12 +248,12 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
 
 class ekbilgiler {
   bool isExpanded;
-  final int? devirbakiye;
+  final String? devirbakiye;
   final int? hesapNo;
   final String? sirketAd;
   final IconData? bankaIcon;
   final String? bankaAd;
-  final int? bakiye;
+  final String? bakiye;
 
   ekbilgiler(
       {this.isExpanded: false,
@@ -287,4 +263,47 @@ class ekbilgiler {
         this.sirketAd,
         this.hesapNo,
         this.devirbakiye});
+
+  String bakiyeformat(){
+    bakiye!;
+    String priceInText = "";
+    int counter = 0;
+    for(int i = (bakiye!.length - 1);  i >= 0; i--){
+      counter++;
+      String str = bakiye![i];
+      if(bakiye![i]=="."){
+        priceInText = "$str$priceInText";
+      }
+      else if((counter % 3) != 0 && i !=0){
+        priceInText = "$str$priceInText";
+      }else if(i == 0 ){
+        priceInText = "$str$priceInText";
+
+      }else{
+        priceInText = ",$str$priceInText";
+      }
+    }
+    return priceInText.trim();
+  }
+  String devirbakiyeformat(){
+    devirbakiye!;
+    String priceInText = "";
+    int counter = 0;
+    for(int i = (devirbakiye!.length - 1);  i >= 0; i--){
+      counter++;
+      String str = devirbakiye![i];
+      if(devirbakiye![i]=="."){
+        priceInText = "$str$priceInText";
+      }
+      else if((counter % 3) != 0 && i !=0){
+        priceInText = "$str$priceInText";
+      }else if(i == 0 ){
+        priceInText = "$str$priceInText";
+
+      }else{
+        priceInText = ",$str$priceInText";
+      }
+    }
+    return priceInText.trim();
+  }
 }

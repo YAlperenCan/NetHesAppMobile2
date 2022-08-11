@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/SonHareketler2.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -93,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                           labelText: 'Şifre',
                           hintStyle: TextStyle(
                               color: Colors.black54.withOpacity(0.35))),
-                    ),
+                      ),
                   ),
                 ),
               ),
@@ -109,7 +110,12 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(fontSize: 17),
                         )),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context)=>Sonhareketler2()),
+                          );
+                        },
                         child: Container(
                             decoration: BoxDecoration(
                                 color: Colors.purple[900],
