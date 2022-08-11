@@ -9,6 +9,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool gorunum=true;
+
+  void _toggle() {
+    setState(() {
+      gorunum = !gorunum;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -88,12 +96,17 @@ class _LoginPageState extends State<LoginPage> {
                       left: 15,
                     ),
                     child: TextFormField(
-                      obscureText: true,
+                      obscureText: gorunum,
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           labelText: 'Şifre',
                           hintStyle: TextStyle(
-                              color: Colors.black54.withOpacity(0.35))),
+                              color: Colors.black54.withOpacity(0.35)),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.visibility),
+                        onPressed: _toggle,
+                      )),
+
                       ),
                   ),
                 ),
