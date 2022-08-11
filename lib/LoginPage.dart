@@ -103,7 +103,9 @@ class _LoginPageState extends State<LoginPage> {
                           hintStyle: TextStyle(
                               color: Colors.black54.withOpacity(0.35)),
                       suffixIcon: IconButton(
-                        icon: Icon(Icons.visibility),
+                        icon: Icon(gorunum
+                            ? Icons.visibility
+                            : Icons.visibility_off,),
                         onPressed: _toggle,
                       )),
 
