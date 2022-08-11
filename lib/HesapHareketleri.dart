@@ -16,7 +16,19 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hesap hareketleri"),
+        title: Text("Hesap hareketleri"),actions: [
+        Padding(
+          padding: EdgeInsets.only(right: 20.0),
+          child: IconButton(
+            onPressed: (){},
+            icon: Icon(
+                Icons.search
+            ),
+          ),
+
+        ),
+
+      ],
       ),
       drawer: CustomDrawer(),
       body: Container(

@@ -30,7 +30,19 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Son Hareketler"),
+          title: Text("Son Hareketler"),actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 20.0),
+            child: IconButton(
+              onPressed: (){},
+              icon: Icon(
+                  Icons.search
+              ),
+            ),
+
+          ),
+
+        ],
         ),
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
@@ -161,12 +173,15 @@ SizedBox(
           ),
           child: RotatedBox(
             quarterTurns: 3,
-            child: Text(
-              sayisi.toString(),
-              style: TextStyle(
-                  fontSize: 15,
-                  decoration: TextDecoration.none,
-                  color: Colors.black,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8,top: 6),
+              child: Text(
+                sayisi.toString(),
+                style: TextStyle(
+                    fontSize: 16,
+                    decoration: TextDecoration.none,
+                    color: Colors.black,
+                ),
               ),
             ),
           ),
@@ -199,12 +214,15 @@ SizedBox(
           ),
           child: RotatedBox(
             quarterTurns: 3,
-            child: Text(
-              sayisi.toString(),
-              style: TextStyle(
-                  fontSize: 15,
-                  decoration: TextDecoration.none,
-                  color: Colors.black),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8,top: 6),
+              child: Text(
+                sayisi.toString(),
+                style: TextStyle(
+                    fontSize: 16,
+                    decoration: TextDecoration.none,
+                    color: Colors.black),
+              ),
             ),
           ),
         ),

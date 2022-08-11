@@ -20,6 +20,19 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Bakiye Bilgileri"),
+          actions: [
+            Padding(
+                padding: EdgeInsets.only(right: 20.0),
+              child: IconButton(
+                onPressed: (){},
+                icon: Icon(
+                  Icons.search
+                ),
+              ),
+
+            ),
+
+          ],
         ),
           drawer: CustomDrawer(),
           body: Column(

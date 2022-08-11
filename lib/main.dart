@@ -40,7 +40,7 @@ class _loginpageState extends State<loginpage> {
     //  ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
 
-      home: LoginPage(),
+      home: BakiyeBilgileri(),
     );
   }
 }
