@@ -102,9 +102,9 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                             ));
                       },
                       isExpanded: item.isExpanded,
-                      body: Container(padding: EdgeInsets.only(right: 140),
+                      body: Container(
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+
                           children: [
                             SizedBox(
                               height: 30,
