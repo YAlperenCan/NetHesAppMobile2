@@ -43,7 +43,6 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     opacity: 0.95)),
             child: Column(
               children: [
-                
                 Padding(
                   padding: const EdgeInsets.only(right:200,top: 15),
                   child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
@@ -126,14 +125,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    hareketlertext(Icons.add_box,Colors.green,"akbank",Money["Girdi_1"]),
-                    hareketlertext(Icons.indeterminate_check_box,Colors.redAccent,"akbank",Money2["çıktı_5"]),
-                    hareketlertext(Icons.add_box,Colors.green,"akbank",Money["Girdi_2"]),
-                    hareketlertext(Icons.indeterminate_check_box,Colors.redAccent,"akbank",Money2["çıktı_4"]),
-                  ],
-                )
+
               ],
             ),
           ),
@@ -141,18 +133,6 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
       ),
     );
   }
-  Container hareketlertext(IconData gelirgider,Color renk,String isim, double? miktar) {
-    return Container(
-        decoration: BoxDecoration(color: Colors.white,
-        borderRadius: BorderRadius.circular(10)),
-      margin: EdgeInsets.only(top :5,left: 13,right: 13,bottom: 5),
-      child: ListTile(
-        leading: Icon(gelirgider,color: renk,size: 25),
-        title: Text("$isim $miktar",style: TextStyle(color: Colors.black),),
-      ),
-    );
-  }
-
   Column chartmethodgir(@required double? yukseklik,@required double? sayisi) {
     double hareket(double tutar){
       return ((tutar) * 200)/300;

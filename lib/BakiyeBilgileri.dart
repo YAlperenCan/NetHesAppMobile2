@@ -174,8 +174,8 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                                       child: Text(
                                                         item.bakiyeformat().toString(),
                                                         style: TextStyle(
-                                                            color: Colors.blue
-                                                                .withOpacity(0.8)),
+                                                            color: Colors.blue[800]
+                                                                ),
                                                       ),
                                                     ),
                                                   )),
