@@ -35,6 +35,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Container(
+            padding: EdgeInsets.only(top: 27),
             width: 700,
             height: 660,
             decoration: BoxDecoration(
@@ -45,10 +46,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     opacity: 0.95)),
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(right:200,top: 15),
-                  child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
-                ),
+
                 Padding(
                   padding: const EdgeInsets.only(),
                   child: Container(
@@ -62,25 +60,30 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                         ]),
                     height: 230,
                     width: 400,
+
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            chartmethodgir(Money["Girdi_1"],Money["Girdi_1"]),
-                            chartmethodgir(Money["Girdi_2"],Money["Girdi_2"]),
-                            chartmethodgir(Money["Girdi_3"],Money["Girdi_3"]),
-                            chartmethodgir(Money["Girdi_4"],Money["Girdi_4"]),
-                            chartmethodgir(Money["Girdi_5"],Money["Girdi_5"]),
-                            chartmethodgir(Money["Girdi_1"],Money["Girdi_1"]),
-                            chartmethodgir(Money["Girdi_2"],Money["Girdi_2"]),
-                            chartmethodgir(Money["Girdi_3"],Money["Girdi_3"]),
-                            chartmethodgir(Money["Girdi_4"],Money["Girdi_4"]),
-                            chartmethodgir(Money["Girdi_5"],Money["Girdi_5"]),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(right:200),
+                          child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                        ),
+                        Container(
+                          height: 205,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              chartmethodgir(Money["Girdi_1"],Money["Girdi_1"]),
+                              chartmethodgir(Money["Girdi_2"],Money["Girdi_2"]),
+                              chartmethodgir(Money["Girdi_3"],Money["Girdi_3"]),
+                              chartmethodgir(Money["Girdi_4"],Money["Girdi_4"]),
+                              chartmethodgir(Money["Girdi_5"],Money["Girdi_5"]),
+                              chartmethodgir(Money["Girdi_1"],Money["Girdi_1"]),
+                              chartmethodgir(Money["Girdi_2"],Money["Girdi_2"]),
+                              chartmethodgir(Money["Girdi_3"],Money["Girdi_3"]),
+                              chartmethodgir(Money["Girdi_4"],Money["Girdi_4"]),
+                              chartmethodgir(Money["Girdi_5"],Money["Girdi_5"]),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -103,28 +106,28 @@ SizedBox(
                     height: 230,
                     width: 400,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right:200,bottom: 50),
+                          padding: const EdgeInsets.only(right:200,),
                           child: Text("ÇIKIŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                         ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            chartmethodcik(Money2["çıktı_1"],Money2["çıktı_1"]),
-                            chartmethodcik(Money2["çıktı_2"],Money2["çıktı_2"]),
-                            chartmethodcik(Money2["çıktı_3"],Money2["çıktı_3"]),
-                            chartmethodcik(Money2["çıktı_4"],Money2["çıktı_4"]),
-                            chartmethodcik(Money2["çıktı_5"],Money2["çıktı_5"]),
-                            chartmethodcik(Money2["çıktı_1"],Money2["çıktı_1"]),
-                            chartmethodcik(Money2["çıktı_2"],Money2["çıktı_2"]),
-                            chartmethodcik(Money2["çıktı_3"],Money2["çıktı_3"]),
-                            chartmethodcik(Money2["çıktı_4"],Money2["çıktı_4"]),
-                            chartmethodcik(Money2["çıktı_5"],Money2["çıktı_5"]),
-                          ],
+                        Container(
+                          height: 205,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              chartmethodcik(Money2["çıktı_1"],Money2["çıktı_1"]),
+                              chartmethodcik(Money2["çıktı_2"],Money2["çıktı_2"]),
+                              chartmethodcik(Money2["çıktı_3"],Money2["çıktı_3"]),
+                              chartmethodcik(Money2["çıktı_4"],Money2["çıktı_4"]),
+                              chartmethodcik(Money2["çıktı_5"],Money2["çıktı_5"]),
+                              chartmethodcik(Money2["çıktı_1"],Money2["çıktı_1"]),
+                              chartmethodcik(Money2["çıktı_2"],Money2["çıktı_2"]),
+                              chartmethodcik(Money2["çıktı_3"],Money2["çıktı_3"]),
+                              chartmethodcik(Money2["çıktı_4"],Money2["çıktı_4"]),
+                              chartmethodcik(Money2["çıktı_5"],Money2["çıktı_5"]),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -181,7 +184,7 @@ SizedBox(
 
   Column chartmethodcik(@required double? yukseklik,@required double? sayisi) {
     double hareket(double tutar){
-      return ((tutar) * 200)/300;
+      return ((tutar) * 250)/300;
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
