@@ -35,6 +35,8 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Container(
+            width: 700,
+            height: 660,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
@@ -45,7 +47,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right:200,top: 15),
-                  child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
+                  child: Text("GİRİŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(),
@@ -84,10 +86,9 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right:200,top: 20),
-                  child: Text("ÇIKIŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
-                ),
+SizedBox(
+  height: 30,
+),
                 Padding(
                   padding: const EdgeInsets.only( bottom: 20),
                   child: Container(
@@ -106,6 +107,10 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right:200,bottom: 50),
+                          child: Text("ÇIKIŞ HAREKETLERİ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
