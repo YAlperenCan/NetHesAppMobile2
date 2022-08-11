@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
               );},
               icon: Icons.access_alarms_sharp),
           ListTileMethod(
-              title: "Bakiye",
+              title: "Bakiye Bilgiler",
               press: () {
                 Navigator.push(
                   context,

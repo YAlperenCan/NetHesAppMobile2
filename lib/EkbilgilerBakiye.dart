@@ -3,57 +3,57 @@ import 'package:flutter/material.dart';
 List<ekbilgiler> items = <ekbilgiler>[
   ekbilgiler(
       bankaAd: "TÜRKİYE FİNANS KATILIM BANK ",
-      bakiye: "243575687374",
-      bankaIcon: Icons.account_balance,
+      bakiye: "243687374",
+      bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "DENİZBANK",
       bakiye: "24357689",
-      bankaIcon: Icons.access_alarms_sharp,
+      bankaImage: AssetImage('assets/bank-logos/denizbank.jpeg'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "ŞEKERBANK",
-      bakiye: "24356789567",
-      bankaIcon: Icons.account_balance,
+      bakiye: "243589567",
+      bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "345676789",
-      bankaIcon: Icons.add_chart_rounded,
+      bakiye: "34576789",
+      bankaImage: AssetImage('assets/bank-logos/tkf.png'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "TÜRK EKONOMİ BANKASI",
       bakiye: "632738123",
-      bankaIcon: Icons.account_balance,
+      bankaImage: AssetImage('assets/bank-logos/denizbank.jpeg'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "2435769868",
-      bankaIcon: Icons.abc,
+      bakiye: "243576868",
+      bankaImage: AssetImage('assets/bank-logos/sekerbank.jpeg'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "DENİZBANK",
-      bakiye: "1435475869",
-      bankaIcon: Icons.account_circle_sharp,
+      bakiye: "14375869",
+      bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "456435345",
-      bankaIcon: Icons.account_balance,
+      bakiye: "4564345",
+      bankaImage: AssetImage('assets/bank-logos/teb.jpeg'),
       sirketAd: "Limak Hotel",
       hesapNo: 123123123,
       devirbakiye: "55555555"),
@@ -62,7 +62,7 @@ List<ekbilgiler> items = <ekbilgiler>[
   final String? devirbakiye;
   final int? hesapNo;
   final String? sirketAd;
-  final IconData? bankaIcon;
+  final AssetImage? bankaImage;
   final String? bankaAd;
   final String? bakiye;
 
@@ -70,7 +70,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       {this.isExpanded: false,
         this.bankaAd,
         this.bakiye,
-        this.bankaIcon,
+        this.bankaImage,
         this.sirketAd,
         this.hesapNo,
         this.devirbakiye});

@@ -76,7 +76,12 @@ class _BakiyeBilgileriState extends State<BakiyeBilgileri> {
                                             left: 5, right: 5),
                                         child: Column(
                                           children: [
-                                            Icon((item.bankaIcon!)),
+                                            Container(
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(20)
+                                                ),
+                                                width:40,
+                                                height:40,child: Image(image: item.bankaImage!)),
                                           ],
                                         ),
                                       ),
