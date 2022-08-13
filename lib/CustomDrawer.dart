@@ -82,10 +82,10 @@ Widget build(BuildContext context) {
     return ListTile(
         horizontalTitleGap: 0.0,
         onTap: press,
-        leading: Icon(icon, color: Colors.white54, size: 25),
+        leading: Icon(icon, color: Colors.white54, size: 22),
         title: Text(
           title,
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 16),
         ));
   }
 }

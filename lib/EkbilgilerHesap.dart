@@ -7,7 +7,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       hotelAd: "Limak Limra Hotel",
       hesapNo: 123123123,
       adres: "Referans nolu havale yapılmıştır",
-      tarih: 151020221150,
+      tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
        okisaret: Icons.arrow_upward),

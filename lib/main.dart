@@ -3,8 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:loginpage/BakiyeBilgileri.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
-
-
 import 'HesapHareketleri.dart';
 import 'SonHareketler2.dart';
 
@@ -40,7 +38,7 @@ class _loginpageState extends State<loginpage> {
     //  ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
 
-      home: BakiyeBilgileri(),
+      home: LoginPage(),
     );
   }
 }
