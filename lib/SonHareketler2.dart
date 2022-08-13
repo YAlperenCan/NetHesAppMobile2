@@ -30,19 +30,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Son Hareketler"),actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: IconButton(
-              onPressed: (){},
-              icon: Icon(
-                  Icons.search
-              ),
-            ),
-
-          ),
-
-        ],
+          title: Text("Son Hareketler"),
         ),
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
@@ -51,11 +39,8 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             width: 700,
             height: 660,
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://cdn.discordapp.com/attachments/731126213292064871/1001441274991214592/unknown.png'),
-                    fit: BoxFit.cover,
-                    opacity: 0.95)),
+            color: Colors.blue[100]
+            ),
             child: Column(
               children: [
 

@@ -28,15 +28,15 @@ Widget build(BuildContext context) {
             ),
           ),
           const SizedBox(
-            height: 25,
+            height: 10,
           ),
           ListTileMethod(
-              title: "Dashboard",
+              title: "Son hareketler",
               press: () {Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context)=>Sonhareketler2()),
               );},
-              icon: Icons.access_alarms_sharp),
+              icon: Icons.dashboard),
           ListTileMethod(
               title: "Bakiye Bilgiler",
               press: () {
@@ -46,8 +46,6 @@ Widget build(BuildContext context) {
                 );
               },
               icon: Icons.account_balance),
-
-
           ListTileMethod(
               title: "Hesap Hareketleri",
               press: () {Navigator.push(
@@ -57,6 +55,8 @@ Widget build(BuildContext context) {
               icon: Icons.wallet),
           ListTileMethod(
               title: "Profil", press: () {}, icon: Icons.person),
+          ListTileMethod(
+              title: "Bildirim Ayarları", press: () {}, icon: Icons.notifications_active),
           ListTileMethod(
               title: "Çıkış Yap", press: () {Navigator.push(
             context,

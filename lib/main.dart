@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loginpage/BakiyeBilgileri.dart';
+import 'package:loginpage/BakiyeBilgileri2.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
 import 'HesapHareketleri.dart';

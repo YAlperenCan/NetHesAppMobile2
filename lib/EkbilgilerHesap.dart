@@ -10,7 +10,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
-       okisaret: Icons.arrow_upward),
+       okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "DENİZBANK",
       bakiye: "257689",
@@ -21,7 +21,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
-      okisaret: Icons.arrow_downward),
+      okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "ŞEKERBANK",
       bakiye: "789567",
@@ -32,7 +32,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
-      okisaret: Icons.arrow_upward),
+      okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
       bakiye: "3476789",
@@ -42,7 +42,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
-      okisaret: Icons.arrow_downward),
+      okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "TÜRK EKONOMİ BANKASI",
       bakiye: "6328123",
@@ -52,7 +52,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
-okisaret: Icons.arrow_upward),
+okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
       bakiye: "249868",
@@ -62,7 +62,7 @@ okisaret: Icons.arrow_upward),
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
-      okisaret: Icons.arrow_downward),
+      okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "DENİZBANK",
       bakiye: "147869.09",
@@ -72,7 +72,7 @@ okisaret: Icons.arrow_upward),
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
-      okisaret: Icons.arrow_downward),
+      okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
       bakiye: "435345.09",
@@ -82,7 +82,7 @@ okisaret: Icons.arrow_upward),
       tarih: 15102022,
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
-okisaret: Icons.arrow_upward),
+okisaret: Icons.add),
 ];
 class ekbilgiler {
   bool isExpanded;

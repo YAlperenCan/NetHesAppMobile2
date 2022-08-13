@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:loginpage/CustomDrawer.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'EkbilgilerHesap.dart';
+
 class HesapHareketleri extends StatefulWidget {
   const HesapHareketleri({Key? key}) : super(key: key);
 
@@ -10,29 +11,16 @@ class HesapHareketleri extends StatefulWidget {
 }
 
 class _HesapHareketleriState extends State<HesapHareketleri> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hesap hareketleri"),actions: [
-        Padding(
-          padding: EdgeInsets.only(right: 20.0),
-          child: IconButton(
-            onPressed: (){},
-            icon: Icon(
-                Icons.search
-            ),
-          ),
-
-        ),
-
-      ],
+        title: Text("Hesap Hareketleri"),
       ),
       drawer: CustomDrawer(),
       body: Container(
-        height: 600,
+        color: Colors.blue[100],
+        height: 650,
         width: 600,
         child: Expanded(
           flex: 20,
@@ -56,22 +44,24 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                             child: Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 5, right: 5),
+                                  padding:
+                                      const EdgeInsets.only(left: 5, right: 5),
                                   child: Column(
                                     children: [
                                       Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(20)
-                                        ),
-                                          width:40,
-                                          height:40,child: Image(image: item.bankaImage!)),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(20)),
+                                          width: 40,
+                                          height: 40,
+                                          child:
+                                              Image(image: item.bankaImage!)),
                                     ],
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      right: 10, left: 5),
+                                  padding:
+                                      const EdgeInsets.only(right: 10, left: 5),
                                   child: Expanded(
                                     child: Column(
                                       children: [
@@ -90,31 +80,43 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                   ),
                                 ),
                                 Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                  flex: 7,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
+                                      Container(
+                                        child: Icon(
+                                          item.okisaret,
+                                          color: item.collors,
+                                          size: 20,
+                                        ),
+                                      ),
                                       Container(
                                         padding: EdgeInsets.only(left: 0),
                                         child: Text(
                                           (item.bakiyeformat()).toString(),
-                                          style: TextStyle(
-                                              color: item.collors
-                                          ),
+                                          style: TextStyle(color: item.collors),
                                         ),
                                       ),
-
+                                      Container(
+                                        child: Text(
+                                          " TL",
+                                          style: TextStyle(color: item.collors),
+                                        ),
+                                      )
                                     ],
-
                                   ),
                                 ),
-                                Container(
-                                  child: Icon(item.okisaret,color: item.collors,size: 20,),
-                                ),
                                 Expanded(
+                                  flex: 4,
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      Container(child: Text(item.tarih!.toString(),style: TextStyle(fontSize: 12),)),
+                                      Container(
+                                          child: Text(
+                                        item.tarih!.toString(),
+                                        style: TextStyle(fontSize: 12),
+                                      )),
                                     ],
                                   ),
                                 )
@@ -124,7 +126,6 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                       isExpanded: item.isExpanded,
                       body: Container(
                         child: Column(
-
                           children: [
                             SizedBox(
                               height: 30,
@@ -133,8 +134,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                             ),
                             SizedBox(
                               height: 30,
-                              child:
-                              Text(
+                              child: Text(
                                 item.hesapNo.toString(),
                                 style: TextStyle(fontSize: 14),
                               ),
@@ -161,7 +161,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
             ],
           ),
         ),
-      ),);
+      ),
+    );
   }
 }
-
