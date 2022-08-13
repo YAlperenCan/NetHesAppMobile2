@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 List<ekbilgiler> items = <ekbilgiler>[
   ekbilgiler(
       bankaAd: "TÜRKİYE FİNANS KATILIM BANK ",
-      bakiye: "577374.09",
+      bakiye: "57374.09",
       bankaImage: AssetImage('assets/bank-logos/tkf.png'),
       hotelAd: "Limak Limra Hotel",
       hesapNo: 123123123,
@@ -35,7 +35,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "3476789",
+      bakiye: "34679",
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
@@ -45,7 +45,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "TÜRK EKONOMİ BANKASI",
-      bakiye: "6328123",
+      bakiye: "63223",
       bankaImage: AssetImage('assets/bank-logos/teb.jpeg'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
@@ -55,7 +55,7 @@ List<ekbilgiler> items = <ekbilgiler>[
 okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "249868",
+      bakiye: "24986800",
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
@@ -65,7 +65,7 @@ okisaret: Icons.add),
       okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "DENİZBANK",
-      bakiye: "147869.09",
+      bakiye: "14789.09",
       bankaImage: AssetImage('assets/bank-logos/denizbank.jpeg'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
@@ -75,7 +75,7 @@ okisaret: Icons.add),
       okisaret: Icons.remove),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "435345.09",
+      bakiye: "43345.09",
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loginpage/BakiyeBilgileri.dart';
 import 'package:loginpage/BakiyeBilgileri2.dart';
+import 'package:loginpage/BottomNavigatorTest.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
 import 'HesapHareketleri.dart';
@@ -39,7 +40,7 @@ class _loginpageState extends State<loginpage> {
     //  ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
 
-      home: LoginPage(),
+      home: BottomNavigatorTest(),
     );
   }
 }

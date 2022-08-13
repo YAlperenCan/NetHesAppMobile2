@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:loginpage/CustomDrawer.dart';
-import 'package:loginpage/Dasboard.dart';
 import 'EkbilgilerHesap.dart';
 
 class HesapHareketleri extends StatefulWidget {
@@ -80,7 +79,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 7,
+                                  flex: 14,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
@@ -100,15 +99,18 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                       ),
                                       Container(
                                         child: Text(
-                                          " TL",
+                                          " TRY",
                                           style: TextStyle(color: item.collors),
                                         ),
                                       )
                                     ],
                                   ),
                                 ),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Expanded(
-                                  flex: 4,
+                                  flex: 8,
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [

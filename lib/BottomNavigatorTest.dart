@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:loginpage/CustomDrawer.dart';
-import 'package:loginpage/Dasboard.dart';
 
-class Sonhareketler2 extends StatefulWidget {
-  const Sonhareketler2({Key? key}) : super(key: key);
+class BottomNavigatorTest extends StatefulWidget {
+  const BottomNavigatorTest({Key? key}) : super(key: key);
 
   @override
-  State<Sonhareketler2> createState() => _Sonhareketler2State();
+  State<BottomNavigatorTest> createState() => _BottomNavigatorTestState();
 }
 
-class _Sonhareketler2State extends State<Sonhareketler2> {
+class _BottomNavigatorTestState extends State<BottomNavigatorTest> {
   @override
   Map<String, double> Money = {
     "Girdi_1": 250,
@@ -26,13 +25,36 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     "çıktı_4": 130,
     "çıktı_5": 200
   };
+
+
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.green,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              label: 'Son Hareketler',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance),
+              label: 'Bakiye Bilgileri',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.wallet),
+              label: 'Hesap Hareket',
+            ),BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profil',
+            ),
+
+          ],
+        ),
         appBar: AppBar(
           title: Text("Son Hareketler"),
         ),
-        drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.only(top: 27),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'BakiyeBilgileri.dart';
+import 'BakiyeBilgileri2.dart';
 import 'HesapHareketleri.dart';
 import 'LoginPage.dart';
 import 'SonHareketler2.dart';
@@ -42,7 +43,7 @@ Widget build(BuildContext context) {
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context)=>BakiyeBilgileri()),
+                  MaterialPageRoute(builder: (context)=>BakiyeBilgileri2()),
                 );
               },
               icon: Icons.account_balance),
