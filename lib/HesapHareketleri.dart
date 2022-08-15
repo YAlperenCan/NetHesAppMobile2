@@ -15,8 +15,9 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hesap Hareketleri"),
+        centerTitle: true,
       ),
-      drawer: CustomDrawer(),
+      //drawer: CustomDrawer(),
       body: Container(
         color: Colors.blue[100],
         height: 650,

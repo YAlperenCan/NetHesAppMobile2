@@ -31,8 +31,9 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Son Hareketler"),
+          centerTitle: true,
         ),
-        drawer: CustomDrawer(),
+        //drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.only(top: 27),

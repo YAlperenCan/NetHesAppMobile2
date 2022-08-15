@@ -44,14 +44,15 @@ class _BakiyeBilgileri2State extends State<BakiyeBilgileri2> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Bakiye Bilgileri"),
+          centerTitle: true,
         ),
-        drawer: CustomDrawer(),
+        //drawer: CustomDrawer(),
         body: Container(
           color: Colors.blue[100],
           child: Column(
             children: [
               Expanded(
-                  flex: 2,
+                  flex: 5,
                   child: Container(
                     color: Colors.white,
                     child: SingleChildScrollView(
@@ -75,7 +76,7 @@ class _BakiyeBilgileri2State extends State<BakiyeBilgileri2> {
                     ),
                   )),
               Expanded(
-                flex: 3,
+                flex: 7,
                 child: ListView(
                   children: [
                     ExpansionPanelList(

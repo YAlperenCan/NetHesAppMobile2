@@ -7,7 +7,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       hotelAd: "Limak Limra Hotel",
       hesapNo: 123123123,
       adres: "Referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
        okisaret: Icons.add),
@@ -18,7 +18,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
       okisaret: Icons.remove),
@@ -29,7 +29,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
       okisaret: Icons.add),
@@ -39,7 +39,7 @@ List<ekbilgiler> items = <ekbilgiler>[
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
       okisaret: Icons.remove),
@@ -49,17 +49,17 @@ List<ekbilgiler> items = <ekbilgiler>[
       bankaImage: AssetImage('assets/bank-logos/teb.jpeg'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
 okisaret: Icons.add),
   ekbilgiler(
       bankaAd: "VAKIFBANK",
-      bakiye: "24986800",
+      bakiye: "249800",
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
       okisaret: Icons.remove),
@@ -69,7 +69,7 @@ okisaret: Icons.add),
       bankaImage: AssetImage('assets/bank-logos/denizbank.jpeg'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.red[700],
       okisaret: Icons.remove),
@@ -79,7 +79,7 @@ okisaret: Icons.add),
       bankaImage: AssetImage('assets/bank-logos/vakıfbank.png'),      hotelAd: "Limak Hotel",
       hesapNo: 123123123,
       adres: "referans nolu havale yapılmıştır",
-      tarih: 15102022,
+      tarih: "15:10",
       hesapYeri: "Kızılay Şube Hesabı"
       ,collors: Colors.green[700],
 okisaret: Icons.add),
@@ -88,7 +88,7 @@ class ekbilgiler {
   bool isExpanded;
   final String? adres;
   final String? hesapYeri;
-  final int? tarih;
+  final String? tarih;
   final IconData? okisaret;
   final Color? collors;
   final int? hesapNo;

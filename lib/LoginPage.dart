@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/BottomNavigatorTest.dart';
 import 'package:loginpage/SonHareketler2.dart';
 
 class LoginPage extends StatefulWidget {
@@ -128,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context)=>Sonhareketler2()),
+                            MaterialPageRoute(builder: (context)=>BottomNavigatorTest()),
                           );
                         },
                         child: Container(
