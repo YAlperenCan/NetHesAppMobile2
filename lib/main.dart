@@ -5,6 +5,7 @@ import 'package:loginpage/BakiyeBilgileri2.dart';
 import 'package:loginpage/BottomNavigatorTest.dart';
 import 'package:loginpage/Dasboard.dart';
 import 'package:loginpage/LoginPage.dart';
+import 'package:loginpage/SonHareketlerTest.dart';
 import 'HesapHareketleri.dart';
 import 'SonHareketler2.dart';
 
@@ -40,7 +41,7 @@ class _loginpageState extends State<loginpage> {
     //  ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
 
-      home: LoginPage(),
+      home: Sonhareketler2(),
     );
   }
 }

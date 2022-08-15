@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:loginpage/CustomDrawer.dart';
 import 'package:loginpage/Dasboard.dart';
+import 'package:charts_flutter/flutter.dart' as chart;
+
 
 class Sonhareketler2 extends StatefulWidget {
   const Sonhareketler2({Key? key}) : super(key: key);
@@ -12,21 +14,52 @@ class Sonhareketler2 extends StatefulWidget {
 
 class _Sonhareketler2State extends State<Sonhareketler2> {
   @override
-  Map<String, double> Money = {
-    "Girdi_1": 250,
-    "Girdi_2": 120,
-    "Girdi_3": 45,
-    "Girdi_4": 150,
-    "Girdi_5": 70
-  };
-  Map<String, double> Money2 = {
-    "çıktı_1": 200,
-    "çıktı_2": 120,
-    "çıktı_3": 80,
-    "çıktı_4": 130,
-    "çıktı_5": 200
-  };
+  static final List<grafikcik> paraData2 = [
+    grafikcik("10.31", 230, Colors.blue),
+    grafikcik("10.20", 300, Colors.blue),
+    grafikcik("10.50", 140, Colors.blue),
+    grafikcik("9.30", 280, Colors.blue),
+    grafikcik("10.30", 200, Colors.blue),
+    grafikcik("7.30", 350, Colors.blue),
+    grafikcik("10.10", 170, Colors.blue),
+    grafikcik("19.30", 260, Colors.blue),
+    grafikcik("17.30", 110, Colors.blue),
+    grafikcik("10.19", 290, Colors.blue),
+  ];
+
+  static final List<grafikgir> paraData = [
+    grafikgir("10.31", 150, Colors.blue),
+    grafikgir("10.20", 200, Colors.blue),
+    grafikgir("10.50", 340, Colors.blue),
+    grafikgir("9.30", 180, Colors.blue),
+    grafikgir("10.30", 400, Colors.blue),
+    grafikgir("7.30", 350, Colors.blue),
+    grafikgir("10.10", 270, Colors.blue),
+    grafikgir("19.30", 200, Colors.blue),
+    grafikgir("17.30", 350, Colors.blue),
+    grafikgir("10.19", 170, Colors.blue),
+  ];
   Widget build(BuildContext context) {
+    List<chart.Series<grafikcik, String>> series2 = [
+      chart.Series(
+          data: paraData2,
+          id: "grafikcik",
+          domainFn: (grafikcik pops, _) => pops.saat,
+          measureFn: (grafikcik pops, _) => pops.para,
+          colorFn: (grafikcik pops, _) =>
+              chart.ColorUtil.fromDartColor(pops.renk)),
+    ];
+
+
+    List<chart.Series<grafikgir, String>> series = [
+    chart.Series(
+        data: paraData,
+        id: "grafikgir",
+        domainFn: (grafikgir pops, _) => pops.saat,
+        measureFn: (grafikgir pops, _) => pops.para,
+        colorFn: (grafikgir pops, _) =>
+            chart.ColorUtil.fromDartColor(pops.renk)),
+  ];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -38,133 +71,31 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
           child: Container(
             padding: EdgeInsets.only(top: 27),
             width: 700,
-            height: 660,
+            height: 1060,
             decoration: BoxDecoration(color: Colors.blue[100]),
             child: Column(
               children: [
+                Text("Giriş Hareketleri",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                 Padding(
-                  padding: const EdgeInsets.only(),
+                  padding: EdgeInsets.all(10),
                   child: Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                'https://cdn.discordapp.com/attachments/731126213292064871/1006821181208395836/background-2481466__340.webp'),
-                            fit: BoxFit.cover,
-                            opacity: 0.10),
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, spreadRadius: 1)
-                        ]),
-                    height: 230,
-                    width: 400,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 200),
-                          child: Text(
-                            "GİRİŞ HAREKETLERİ",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                        ),
-                        Container(
-                          height: 205,
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              chartmethodgir(
-                                  Money["Girdi_1"], Money["Girdi_1"]),
-                              chartmethodgir(
-                                  Money["Girdi_2"], Money["Girdi_2"]),
-                              chartmethodgir(
-                                  Money["Girdi_3"], Money["Girdi_3"]),
-                              chartmethodgir(
-                                  Money["Girdi_4"], Money["Girdi_4"]),
-                              chartmethodgir(
-                                  Money["Girdi_5"], Money["Girdi_5"]),
-                              chartmethodgir(
-                                  Money["Girdi_1"], Money["Girdi_1"]),
-                              chartmethodgir(
-                                  Money["Girdi_2"], Money["Girdi_2"]),
-                              chartmethodgir(
-                                  Money["Girdi_3"], Money["Girdi_3"]),
-                              chartmethodgir(
-                                  Money["Girdi_4"], Money["Girdi_4"]),
-                              chartmethodgir(
-                                  Money["Girdi_5"], Money["Girdi_5"]),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    width: 380,
+                    height: 300,
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: chart.BarChart(series),
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
+                Text("Çıkış Hareketleri",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
+                  padding: EdgeInsets.all(10),
                   child: Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                'https://cdn.discordapp.com/attachments/731126213292064871/1006821181208395836/background-2481466__340.webp'),
-                            fit: BoxFit.cover,
-                            opacity: 0.10),
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, spreadRadius: 1)
-                        ]),
-                    height: 230,
-                    width: 400,
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            right: 200,
-                          ),
-                          child: Text(
-                            "ÇIKIŞ HAREKETLERİ",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                        ),
-                        Container(
-                          height: 205,
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              chartmethodcik(
-                                  Money2["çıktı_1"], Money2["çıktı_1"]),
-                              chartmethodcik(
-                                  Money2["çıktı_2"], Money2["çıktı_2"]),
-                              chartmethodcik(
-                                  Money2["çıktı_3"], Money2["çıktı_3"]),
-                              chartmethodcik(
-                                  Money2["çıktı_4"], Money2["çıktı_4"]),
-                              chartmethodcik(
-                                  Money2["çıktı_5"], Money2["çıktı_5"]),
-                              chartmethodcik(
-                                  Money2["çıktı_1"], Money2["çıktı_1"]),
-                              chartmethodcik(
-                                  Money2["çıktı_2"], Money2["çıktı_2"]),
-                              chartmethodcik(
-                                  Money2["çıktı_3"], Money2["çıktı_3"]),
-                              chartmethodcik(
-                                  Money2["çıktı_4"], Money2["çıktı_4"]),
-                              chartmethodcik(
-                                  Money2["çıktı_5"], Money2["çıktı_5"]),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    width: 380,
+                    height: 300,
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: chart.BarChart(series2),
                   ),
                 ),
               ],
@@ -175,88 +106,16 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     );
   }
 
-  Column chartmethodgir(@required double? yukseklik, @required double? sayisi) {
-    double hareket(double tutar) {
-      return ((tutar) * 200) / 300;
-    }
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.blue,
-          ),
-          height: hareket(yukseklik!),
-          width: 26,
-          margin: EdgeInsets.only(
-            left: 7,
-            right: 7,
-          ),
-          child: RotatedBox(
-            quarterTurns: 3,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 8, top: 6),
-              child: Text(
-                sayisi.toString(),
-                style: TextStyle(
-                  fontSize: 16,
-                  decoration: TextDecoration.none,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
-        ),
-        Text(
-          "12.60",
-          style: TextStyle(
-              fontSize: 12,
-              color: Colors.black,
-              decoration: TextDecoration.none),
-        )
-      ],
-    );
-  }
-
-  Column chartmethodcik(@required double? yukseklik, @required double? sayisi) {
-    double hareket(double tutar) {
-      return ((tutar) * 250) / 300;
-    }
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Container(
-          decoration: BoxDecoration(color: Colors.blue),
-          height: hareket(yukseklik!),
-          width: 26,
-          margin: EdgeInsets.only(
-            left: 7,
-            right: 7,
-          ),
-          child: RotatedBox(
-            quarterTurns: 3,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 8, top: 6),
-              child: Text(
-                sayisi.toString(),
-                style: TextStyle(
-                    fontSize: 16,
-                    decoration: TextDecoration.none,
-                    color: Colors.black),
-              ),
-            ),
-          ),
-        ),
-        Text(
-          "12.60",
-          style: TextStyle(
-              fontSize: 12,
-              color: Colors.black,
-              decoration: TextDecoration.none),
-        )
-      ],
-    );
-  }
+}
+class grafikgir {
+  final String saat;
+  final int para;
+  final Color renk;
+  grafikgir(this.saat, this.para, this.renk);
+}
+class grafikcik {
+  final String saat;
+  final int para;
+  final Color renk;
+  grafikcik(this.saat, this.para, this.renk);
 }
