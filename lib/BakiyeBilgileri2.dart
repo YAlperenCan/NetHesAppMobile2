@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginpage/CustomDrawer.dart';
+import 'package:loginpage/deneme/DenemeEskiCustomDrawer.dart';
 import 'EkbilgilerBakiye.dart';
 
 class BakiyeBilgileri2 extends StatefulWidget {
@@ -43,12 +43,13 @@ class _BakiyeBilgileri2State extends State<BakiyeBilgileri2> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text("Bakiye Bilgileri"),
           centerTitle: true,
         ),
         //drawer: CustomDrawer(),
         body: Container(
-          color: Colors.blue[100],
+          color: Colors.grey[200],
           child: Column(
             children: [
               Expanded(
@@ -200,7 +201,7 @@ class _BakiyeBilgileri2State extends State<BakiyeBilgileri2> {
                                 Row(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 67,top: 5,bottom: 15),
+                                      padding: const EdgeInsets.only(left: 68,top: 5,bottom: 15),
                                       child: Text(
                                         "Devir Bakiye :",
                                         style: TextStyle(fontSize: 14),

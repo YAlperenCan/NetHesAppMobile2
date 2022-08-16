@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:loginpage/CustomDrawer.dart';
-import 'package:loginpage/Dasboard.dart';
+import 'package:loginpage/deneme/DenemeEskiCustomDrawer.dart';
+import 'package:loginpage/deneme/DenemeDasboard.dart';
 import 'package:charts_flutter/flutter.dart' as chart;
 
 
@@ -63,6 +63,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text("Son Hareketler"),
           centerTitle: true,
         ),
@@ -72,7 +73,7 @@ class _Sonhareketler2State extends State<Sonhareketler2> {
             padding: EdgeInsets.only(top: 27),
             width: 700,
             height: 1060,
-            decoration: BoxDecoration(color: Colors.blue[100]),
+            decoration: BoxDecoration(color: Colors.grey[200]),
             child: Column(
               children: [
                 Text("Giriş Hareketleri",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),

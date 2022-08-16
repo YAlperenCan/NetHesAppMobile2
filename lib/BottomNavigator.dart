@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:loginpage/BakiyeBilgileri2.dart';
-import 'package:loginpage/CustomDrawer.dart';
+import 'package:loginpage/deneme/DenemeEskiCustomDrawer.dart';
 import 'package:loginpage/HesapHareketleri.dart';
+import 'package:loginpage/Profile.dart';
 import 'package:loginpage/SonHareketler2.dart';
 
 class BottomNavigatorTest extends StatefulWidget {
@@ -34,6 +35,7 @@ class _BottomNavigatorTestState extends State<BottomNavigatorTest> {
     Sonhareketler2(),
     BakiyeBilgileri2(),
     HesapHareketleri(),
+    Profile()
   ];
 
   Widget build(BuildContext context) {

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:loginpage/Dasboard.dart';
+import 'package:loginpage/deneme/DenemeDasboard.dart';
+import 'package:loginpage/deneme/DenemeEskiCustomDrawer.dart';
 
-import 'CustomDrawer.dart';
-import 'EkbilgilerBakiye.dart';
+import '../EkbilgilerBakiye.dart';
+
 
 class BakiyeBilgileri extends StatefulWidget {
   const BakiyeBilgileri({Key? key}) : super(key: key);

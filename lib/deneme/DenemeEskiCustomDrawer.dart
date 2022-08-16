@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'BakiyeBilgileri.dart';
-import 'BakiyeBilgileri2.dart';
-import 'HesapHareketleri.dart';
-import 'LoginPage.dart';
-import 'SonHareketler2.dart';
+import '../BakiyeBilgileri2.dart';
+import '../HesapHareketleri.dart';
+import '../LoginPage.dart';
+import '../SonHareketler2.dart';
 
 class CustomDrawer extends StatelessWidget {
 const CustomDrawer({

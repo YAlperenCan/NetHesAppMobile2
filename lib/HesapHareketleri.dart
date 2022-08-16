@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginpage/CustomDrawer.dart';
+import 'package:loginpage/deneme/DenemeEskiCustomDrawer.dart';
 import 'EkbilgilerHesap.dart';
 
 class HesapHareketleri extends StatefulWidget {
@@ -14,12 +14,13 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text("Hesap Hareketleri"),
         centerTitle: true,
       ),
       //drawer: CustomDrawer(),
       body: Container(
-        color: Colors.blue[100],
+        color: Colors.grey[200],
         height: 650,
         width: 600,
         child: Expanded(
@@ -117,7 +118,7 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                                     children: [
                                       Container(
                                           child: Text(
-                                        item.tarih!.toString(),
+                                        item.saat!.toString(),
                                         style: TextStyle(fontSize: 12),
                                       )),
                                     ],
@@ -153,6 +154,13 @@ class _HesapHareketleriState extends State<HesapHareketleri> {
                               height: 30,
                               child: Text(
                                 item.hesapYeri.toString(),
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 30,
+                              child: Text(
+                                item.tarih.toString(),
                                 style: TextStyle(fontSize: 14),
                               ),
                             ),

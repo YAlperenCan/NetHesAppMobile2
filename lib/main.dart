@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:loginpage/BakiyeBilgileri.dart';
 import 'package:loginpage/BakiyeBilgileri2.dart';
-import 'package:loginpage/BottomNavigatorTest.dart';
-import 'package:loginpage/Dasboard.dart';
+import 'package:loginpage/BottomNavigator.dart';
+import 'package:loginpage/deneme/DenemeDasboard.dart';
 import 'package:loginpage/LoginPage.dart';
-import 'package:loginpage/SonHareketlerTest.dart';
+import 'package:loginpage/Profile.dart';
+import 'package:loginpage/deneme/DenemeEskiSonHareketlerTest.dart';
 import 'HesapHareketleri.dart';
 import 'SonHareketler2.dart';
 
@@ -41,7 +41,7 @@ class _loginpageState extends State<loginpage> {
     //  ),themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
 
-      home: Sonhareketler2(),
+      home: LoginPage(),
     );
   }
 }
