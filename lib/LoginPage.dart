@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool gorunum = true;
-
+  final _formKey = GlobalKey<FormState>();
   void _toggle() {
     setState(() {
       gorunum = !gorunum;
@@ -31,6 +31,8 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.transparent,
         body: SafeArea(
           child: Form(
+           // autovalidateMode: AutovalidateMode.onUserInteraction,
+            key: _formKey,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -75,6 +77,15 @@ class _LoginPageState extends State<LoginPage> {
                           child: Padding(
                             padding: const EdgeInsets.only(left: 15),
                             child: TextFormField(
+                              validator: (deger) {
+                              if (deger == null || deger.isEmpty ) {
+                                return 'Lütfen e-mail giriniz.';
+                              }
+                              else if(!deger.contains(RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+"))){
+                                return 'Lütfen geçerli bir e-mail giriniz.';
+                              }
+                              return null;
+                            },
                               onTap: () {
                                 setState(() {});
                               },
@@ -102,6 +113,15 @@ class _LoginPageState extends State<LoginPage> {
                               left: 15,
                             ),
                             child: TextFormField(
+                              validator: (deger) {
+                                if (deger == null || deger.isEmpty ) {
+                                  return 'Lütfen şifre giriniz.';
+                                }
+                                else if(deger.length < 8){
+                                  return 'Şifre uzunluğu en az 8 karakterli olmalıdır.';
+                                }
+                                return null;
+                              },
                               obscureText: gorunum,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
@@ -134,12 +154,14 @@ class _LoginPageState extends State<LoginPage> {
                                 )),
                             TextButton(
                                 onPressed: () {
+                                  if (_formKey.currentState!.validate()) {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
                                             BottomNavigatorTest()),
                                   );
+                                }
                                 },
                                 child: Container(
                                     decoration: BoxDecoration(
@@ -160,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                   SizedBox(
-                    height: 140,
+                    height: 120,
                   ),
                   CircleAvatar(
                     radius: 25,
@@ -189,17 +211,19 @@ class _LoginPageState extends State<LoginPage> {
   Future openDialog() => showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text("E-mailinizi ve şikayetinizi yazınız."),
+          title: Text("Sizinle iletişime geçebilmemiz için lütfen e-mailinizi ve şikayetinizi yazınız."),
           content: Container(
-            height: 200.0,
+            height: 150.0,
             width: 400.0,
             child: Column(
               children: [
                 TextField(
-                  decoration: InputDecoration(hintText: 'Mail adresinizi giriniz.'),
+                  decoration: InputDecoration(hintText: 'Lütfen mail adresinizi giriniz.'),
                 ),
                 TextField(
-                  decoration: InputDecoration(hintText: 'Şikayetinizi yazınız.',
+                  keyboardType: TextInputType.multiline,
+                  maxLines: null,
+                  decoration: InputDecoration(hintText: 'Lütfen şikayetinizi yazınız.',
 
                   ),
                 ),

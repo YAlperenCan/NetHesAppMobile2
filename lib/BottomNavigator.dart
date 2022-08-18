@@ -60,7 +60,7 @@ class _BottomNavigatorTestState extends State<BottomNavigatorTest> {
               label: 'Hesap Hareket',
             ),BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: 'Profil',
+              label: 'Kullanıcı',
             ),
           ],
           unselectedItemColor: Colors.white60,

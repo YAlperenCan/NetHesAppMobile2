@@ -57,7 +57,7 @@ class _ProfileState extends State<Profile> {
                 height: 8,
               ),
               Text(
-                'E-Posta:  ${User_Data.email}',
+                'E-mail:  ${User_Data.email}',
                 style: TextStyle(color: Colors.grey),
               ),
               SizedBox(

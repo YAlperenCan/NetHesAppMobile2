@@ -37,10 +37,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           },
           child: ListView(
             children: [
-              Text(
-                "Profili Düzenle",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-              ),
+
               SizedBox(
                 height: 15,
               ),
@@ -93,9 +90,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 height: 35,
               ),
               buildTextField("İsim Soyisim", "Umut Eren KEİYİNCİ", false),
-              buildTextField("E-Posta", "umutkeiyinci@hotmail.com", false),
+              buildTextField("E-mail", "umutkeiyinci@hotmail.com", false),
               buildTextField("Şifre", "*********", true),
-              buildTextField("Konum", "Ankara, Türkiye", false),
+              buildTextField("Şirket", "Limak.AŞ", false),
               SizedBox(
                 height: 35,
               ),
